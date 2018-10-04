@@ -1,0 +1,93 @@
+.cover-section {
+  height: 100%;
+}
+
+.background-cover {
+  width: 100%;
+  height: 900px;
+}
+
+.introduction {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 50;
+  margin: 200px auto;
+  color: white;
+  font-size: 55px;
+  text-align: left;
+}
+
+.introduction > p {
+  font-size: 30px;
+  line-height: 50px;
+  font-weight: lighter;
+  margin-top: 5px;
+}
+
+.contact {
+  margin-top: 20px;
+  margin-right: 50px;
+  width: 50px;
+  height: 50px;
+  filter: brightness(0) invert(1);
+  transition: 0.2s;
+}
+
+.contact:hover {
+  filter: brightness(0) invert(0.8);
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.contacts > .img-gradient {
+  position: relative;
+  display: inline-block;
+}
+
+.img-gradient:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 94%;
+  display: inline-block;
+  background: -moz-linear-gradient(
+    top,
+    rgba(0, 47, 75, 0.5) 0%,
+    rgba(54, 116, 218, 0.1) 100%
+  ); /* FF3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, rgba(54, 116, 218, 0.1)),
+    color-stop(100%, rgba(0, 47, 75, 0.1))
+  ); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 47, 75, 0.1) 0%,
+    rgba(54, 116, 218, 0.1) 100%
+  ); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(
+    top,
+    rgba(0, 47, 75, 0.1) 0%,
+    rgba(54, 116, 218, 0.1) 100%
+  ); /* Opera 11.10+ */
+  background: -ms-linear-gradient(
+    top,
+    rgba(0, 47, 75, 0.1) 0%,
+    rgba(54, 116, 218, 0.1) 100%
+  ); /* IE10+ */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 47, 75, 0.5) 0%,
+    rgba(54, 116, 218, 0.1) 100%
+  ); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002f4b', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+
+.img-gradient img {
+  display: block;
+}
