@@ -1,0 +1,43 @@
+.footer-section {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-section__hello {
+  font-size: 48px;
+  font-weight: bolder;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.footer-section__hello__emoji {
+  height: 50px;
+  width: 50px;
+  margin-right: 20px;
+}
+
+.footer-section__contact {
+  font-size: 24px;
+
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  align-items: center;
+
+  margin: 50px 0px 100px 0px;
+}
+
+.footer-section__contact__icon {
+  transition: 0.3s;
+}
+
+.footer-section__contact__icon:hover {
+  cursor: pointer;
+  color: #b9c6e8;
+}

@@ -10,26 +10,27 @@ import './styles.css';
 const Header = props => {
   return (
     <div className="cover-section">
-      <div class="img-gradient">
-        <img className="background-cover" src={background} />
-      </div>
+      <img className="background-cover" src={background} alt="alt" />
 
       <h1 className="introduction">
-        Hi, I'm Elton. <p>Hire me and I'll get things done.</p>
+        Hi, I'm Elton. <p>Software Engineer</p>
         <img
           className="contact"
           src={linkedin}
           onClick={() => window.open('https://www.linkedin.com/in/eltonxue')}
+          alt="alt"
         />
         <img
           className="contact"
           src={github}
           onClick={() => window.open('https://www.github.com/eltonxue')}
+          alt="alt"
         />
         <img
           className="contact"
           src={email}
-          onClick={() => (window.location.href = 'mailto:eltonxue@gmail.com')}
+          onClick={() => window.open('mailto:eltonxue@gmail.com')}
+          alt="alt"
         />
       </h1>
     </div>

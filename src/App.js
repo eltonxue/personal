@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import Home from './containers/Home';
 import Navbar from './containers/Navbar';
 
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {

@@ -3,7 +3,7 @@ import React from 'react';
 import ProjectCard from './Card';
 
 import technologist from '../../assets/technologist.png';
-import portalLogo from '../../assets/portal-logo.png';
+import portalLogo from '../../assets/icons/company/portal-logo.png';
 
 import reactIcon from '../../assets/icons/skills/react-original.svg';
 import reduxIcon from '../../assets/icons/skills/redux-original.png';
@@ -55,9 +55,9 @@ import minder4 from '../../assets/projects/minder-4.jpg';
 import minder5 from '../../assets/projects/minder-5.jpg';
 import minder6 from '../../assets/projects/minder-6.jpg';
 
-import save from '../../assets/projects/save-1.jpg';
-import swerve from '../../assets/projects/swerve.png';
-import toobular from '../../assets/projects/toobular.jpg';
+// import save from '../../assets/projects/save-1.jpg';
+// import swerve from '../../assets/projects/swerve.png';
+// import toobular from '../../assets/projects/toobular.jpg';
 
 import './styles.css';
 
@@ -102,7 +102,7 @@ const projects = [
     title: 'CoreOverflow',
     company: 'Procore Technologies',
     description:
-      'An internal tool for engineers to ask and answer questions pertaining to Procore development.',
+      'Internal tool for engineers to ask and answer questions pertaining to Procore development.',
     link: 'https://www.github.com/grantkayes/coreoverflow'
   },
   {
@@ -237,16 +237,214 @@ const projects = [
   }
 ];
 
-const Projects = props => {
-  const Projects = projects.map(({ ...rest }) => <ProjectCard {...rest} />);
-  return (
-    <div className="projects-section">
-      <div className="projects-section-absolute">
-        {Projects}
-        <h2>View More Projects</h2>
+// const moreProjects = [
+//   {
+//     skillIcons: [
+//       {
+//         src: jQueryIcon,
+//         name: 'JQuery'
+//       },
+//       {
+//         src: htmlIcon,
+//         name: 'HTML'
+//       },
+//       {
+//         src: cssIcon,
+//         name: 'CSS'
+//       },
+//       {
+//         src: sassIcon,
+//         name: 'SASS'
+//       },
+//       {
+//         src: nodeIcon,
+//         name: 'Node'
+//       },
+//       {
+//         src: expressIcon,
+//         name: 'Express'
+//       },
+//       {
+//         src: mochaIcon,
+//         name: 'Mocha'
+//       },
+//       {
+//         src: chaiIcon,
+//         name: 'Chai'
+//       },
+//       {
+//         src: postgresIcon,
+//         name: 'Postgres'
+//       },
+//       {
+//         src: sequelizeIcon,
+//         name: 'Sequelize'
+//       }
+//     ],
+//     carouselItems: [
+//       aceit1,
+//       aceit2,
+//       aceit3,
+//       aceit4,
+//       aceit5,
+//       aceit6,
+//       aceit7,
+//       aceit8
+//     ],
+//     icon: portalLogo,
+//     title: 'AceIt',
+//     company: 'The Portal',
+//     description: 'Web application for helping students prepare for interviews.',
+//     link: 'https://www.github.com/eltonxue/aceit'
+//   },
+
+//   {
+//     skillIcons: [
+//       {
+//         src: jQueryIcon,
+//         name: 'JQuery'
+//       },
+//       {
+//         src: htmlIcon,
+//         name: 'HTML'
+//       },
+//       {
+//         src: cssIcon,
+//         name: 'CSS'
+//       },
+//       {
+//         src: sassIcon,
+//         name: 'SASS'
+//       },
+//       {
+//         src: nodeIcon,
+//         name: 'Node'
+//       },
+//       {
+//         src: expressIcon,
+//         name: 'Express'
+//       },
+//       {
+//         src: mongoDBIcon,
+//         name: 'MongoDB'
+//       },
+//       {
+//         src: mongooseIcon,
+//         name: 'Mongoose'
+//       }
+//     ],
+//     carouselItems: [minder1, minder2, minder3, minder4, minder5, minder6],
+//     icon: portalLogo,
+//     title: 'Minder',
+//     company: 'The Portal',
+//     description:
+//       'Social media website for connecting and chatting with friends.',
+//     link: 'https://www.github.com/eltonxue/minder'
+//   }
+// ];
+
+class Projects extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      show1: false,
+      show2: false,
+      show3: false,
+      show4: false
+    };
+  }
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = e => {
+    let scrollPos = window.scrollY;
+
+    if (!this.state.show1 && scrollPos > 0) {
+      this.setState({
+        show1: true
+      });
+    }
+
+    if (this.state.show1 && scrollPos === 0) {
+      this.setState({
+        show1: false
+      });
+    }
+
+    if (!this.state.show2 && scrollPos > 550) {
+      this.setState({
+        show2: true
+      });
+    }
+
+    if (this.state.show2 && scrollPos <= 550) {
+      this.setState({
+        show2: false
+      });
+    }
+
+    if (!this.state.show3 && scrollPos > 1150) {
+      this.setState({
+        show3: true
+      });
+    }
+
+    if (this.state.show3 && scrollPos <= 1150) {
+      this.setState({
+        show3: false
+      });
+    }
+
+    if (!this.state.show4 && scrollPos > 1550) {
+      this.setState({
+        show4: true
+      });
+    }
+
+    if (this.state.show4 && scrollPos <= 1550) {
+      this.setState({
+        show4: false
+      });
+    }
+  };
+
+  viewGitHub = () => {
+    window.open('https://www.github.com/eltonxue');
+  };
+
+  render() {
+    const Projects = projects.map(({ ...rest }, index) => {
+      let show;
+      if (index === 0) {
+        show = this.state.show1;
+      } else if (index === 1) {
+        show = this.state.show2;
+      } else if (index === 2) {
+        show = this.state.show3;
+      } else if (index === 3) {
+        show = this.state.show4;
+      }
+
+      return <ProjectCard {...rest} show={show} />;
+    });
+
+    return (
+      <div className="projects-section">
+        <div className="projects-section-absolute">
+          {Projects}
+          <div className="projects-section-view-more-projects">
+            <h2 onClick={this.viewGitHub}>View More Projects on GitHub</h2>
+          </div>
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default Projects;
