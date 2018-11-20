@@ -76,7 +76,11 @@ class Navbar extends React.Component {
           </Link>
           <div
             className="navbar-item"
-            onClick={() => window.open('/Elton_Xue_Resume.pdf')}
+            onClick={() =>
+              window.open(
+                'https://github.com/eltonxue/ePortfolio-v2/blob/master/Elton_Xue_Resume.pdf'
+              )
+            }
           >
             Resume
           </div>

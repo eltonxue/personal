@@ -228,7 +228,13 @@ class Work extends React.Component {
                 fullOpacity: this.state.show4
               })}
             >
-              <div onClick={() => window.open('/Elton_Xue_Resume.pdf')}>
+              <div
+                onClick={() =>
+                  window.open(
+                    'https://github.com/eltonxue/ePortfolio-v2/blob/master/Elton_Xue_Resume.pdf'
+                  )
+                }
+              >
                 View Full Resume
               </div>
             </div>

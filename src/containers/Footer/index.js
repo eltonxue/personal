@@ -37,9 +37,13 @@ const Footer = props => {
         </div>
         <div
           className="footer-section__contact__icon"
-          onClick={() => window.open('https://www.facebook.com/eltonxue')}
+          onClick={() =>
+            window.open(
+              'https://github.com/eltonxue/ePortfolio-v2/blob/master/Elton_Xue_Resume.pdf'
+            )
+          }
         >
-          Facebook
+          Resume
         </div>
       </div>
     </Element>
