@@ -16,7 +16,7 @@ const Info = ({ show, icon, company, link, role, date, description }) => {
         <div className="job-info__content__title">
           <div
             className="job-info__content__title__company"
-            onClick={() => (window.location.href = link)}
+            onClick={() => window.open(link)}
           >
             {company}
           </div>

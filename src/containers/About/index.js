@@ -25,8 +25,6 @@ class About extends React.Component {
   handleScroll = e => {
     let scrollPos = window.scrollY;
 
-    console.log(scrollPos);
-
     if (!this.state.show && scrollPos > 2700) {
       this.setState({
         show: true

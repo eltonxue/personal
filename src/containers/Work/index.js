@@ -36,8 +36,6 @@ class Work extends React.Component {
   handleScroll = e => {
     let scrollPos = window.scrollY;
 
-    console.log(scrollPos);
-
     if (!this.state.show1 && scrollPos > 3600) {
       this.setState({
         show1: true
@@ -110,7 +108,7 @@ class Work extends React.Component {
       {
         icon: adigamiLogo,
         company: 'Adigami',
-        link: 'https://www.adigami.com',
+        link: 'http://www.adigami.com',
         role: 'Software Engineer Intern',
         date: 'July 2018 - September 2018',
         description:
