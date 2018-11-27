@@ -143,10 +143,6 @@ const projects = [
         name: 'HTML'
       },
       {
-        src: cssIcon,
-        name: 'CSS'
-      },
-      {
         src: sassIcon,
         name: 'SASS'
       },

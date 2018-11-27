@@ -22,7 +22,8 @@ class Work extends React.Component {
       show1: false,
       show2: false,
       show3: false,
-      show4: false
+      show4: false,
+      show5: false
     };
   }
   componentDidMount() {
@@ -36,51 +37,63 @@ class Work extends React.Component {
   handleScroll = e => {
     let scrollPos = window.scrollY;
 
-    if (!this.state.show1 && scrollPos > 3600) {
+    if (!this.state.show1 && scrollPos > 3200) {
       this.setState({
         show1: true
       });
     }
 
-    if (this.state.show1 && scrollPos <= 3600) {
+    if (this.state.show1 && scrollPos <= 3200) {
       this.setState({
         show1: false
       });
     }
 
-    if (!this.state.show2 && scrollPos > 3800) {
+    if (!this.state.show2 && scrollPos > 3400) {
       this.setState({
         show2: true
       });
     }
 
-    if (this.state.show2 && scrollPos <= 3800) {
+    if (this.state.show2 && scrollPos <= 3400) {
       this.setState({
         show2: false
       });
     }
 
-    if (!this.state.show3 && scrollPos > 4000) {
+    if (!this.state.show3 && scrollPos > 3600) {
       this.setState({
         show3: true
       });
     }
 
-    if (this.state.show3 && scrollPos <= 4000) {
+    if (this.state.show3 && scrollPos <= 3600) {
       this.setState({
         show3: false
       });
     }
 
-    if (!this.state.show4 && scrollPos > 4200) {
+    if (!this.state.show4 && scrollPos > 3800) {
       this.setState({
         show4: true
       });
     }
 
-    if (this.state.show4 && scrollPos <= 4200) {
+    if (this.state.show4 && scrollPos <= 3800) {
       this.setState({
         show4: false
+      });
+    }
+
+    if (!this.state.show5 && scrollPos > 4000) {
+      this.setState({
+        show5: true
+      });
+    }
+
+    if (this.state.show5 && scrollPos <= 4000) {
+      this.setState({
+        show5: false
       });
     }
   };
@@ -157,28 +170,28 @@ class Work extends React.Component {
             <img
               src={purpleLine}
               className={cx('work-section__content__left__line line-1', {
-                fullOpacity: this.state.show1
-              })}
-              alt="alt"
-            />
-            <img
-              src={purpleLine}
-              className={cx('work-section__content__left__line line-2', {
                 fullOpacity: this.state.show2
               })}
               alt="alt"
             />
             <img
               src={purpleLine}
-              className={cx('work-section__content__left__line line-3', {
+              className={cx('work-section__content__left__line line-2', {
                 fullOpacity: this.state.show3
               })}
               alt="alt"
             />
             <img
               src={purpleLine}
-              className={cx('work-section__content__left__line line-4', {
+              className={cx('work-section__content__left__line line-3', {
                 fullOpacity: this.state.show4
+              })}
+              alt="alt"
+            />
+            <img
+              src={purpleLine}
+              className={cx('work-section__content__left__line line-4', {
+                fullOpacity: this.state.show5
               })}
               alt="alt"
             />

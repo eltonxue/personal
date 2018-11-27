@@ -1,16 +1,16 @@
 .projects-section {
   background-color: #303854;
-  height: 2500px;
+  height: 2100px;
 }
 
 .projects-section-absolute {
   position: absolute;
-  top: 65%;
+  top: 70%;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 1300px; /* Need a specific value to work */
+  width: 1100px; /* Need a specific value to work */
 }
 
 .projects-section-view-more-projects {
@@ -35,8 +35,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 580px;
-  width: 1300px;
+  height: 500px;
+  width: 1100px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0px 1px 10px black;
@@ -47,8 +47,8 @@
 }
 
 .carousel {
-  width: 800px;
-  height: 460px;
+  width: 700px;
+  height: 430px;
   border-left: 1px solid #d9d9d9;
   border-right: 1px solid #d9d9d9;
   border-top: 1px solid #d9d9d9;
@@ -58,8 +58,8 @@
 }
 
 .carousel.slide img {
-  width: 850px;
-  height: 460px;
+  width: 750px;
+  height: 430px;
 }
 
 .carousel-inner {
@@ -80,8 +80,10 @@
 }
 
 .project-info {
-  width: 360px;
+  width: 320px;
   height: 420px;
+  padding-left: 20px;
+  padding-top: 10px;
 }
 
 .project-icon {
@@ -92,7 +94,7 @@
 
 .project-title {
   margin: 10px 0px 0px 0px;
-  font-size: 38px;
+  font-size: 30px;
   font-weight: bolder;
   font-style: normal;
   font-stretch: normal;
@@ -103,7 +105,7 @@
 
 .project-subtitle {
   margin: 0px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -113,7 +115,7 @@
 
 .project-description {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -139,8 +141,8 @@
 .skill > img {
   filter: grayscale(100%) sepia(60%) hue-rotate(185deg) contrast(70%);
 
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
 }
 
 .skill > p {
