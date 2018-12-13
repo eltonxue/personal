@@ -242,7 +242,7 @@ class Work extends React.Component {
               <div
                 onClick={() =>
                   window.open(
-                    'https://github.com/eltonxue/ePortfolio-v2/blob/master/Elton_Xue_Resume.pdf'
+                    'https://docs.google.com/viewerng/viewer?url=https://github.com/eltonxue/personal/raw/master/Elton_Xue_Resume.pdf'
                   )
                 }
               >
