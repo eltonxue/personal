@@ -5,6 +5,7 @@ import { Element } from 'react-scroll';
 import purpleDot from '../../assets/purple-dot.png';
 import purpleLine from '../../assets/purple-line.png';
 
+import vincitLogo from '../../assets/icons/company/vincit-logo.png';
 import immerseLogo from '../../assets/icons/company/immerse-logo.png';
 import procoreLogo from '../../assets/icons/company/procore-logo.png';
 import adigamiLogo from '../../assets/icons/company/adigami-logo.png';
@@ -23,7 +24,8 @@ class Work extends React.Component {
       show2: false,
       show3: false,
       show4: false,
-      show5: false
+      show5: false,
+      show6: false
     };
   }
   componentDidMount() {
@@ -96,16 +98,37 @@ class Work extends React.Component {
         show5: false
       });
     }
+
+    if (!this.state.show6 && scrollPos > 4200) {
+      this.setState({
+        show6: true
+      });
+    }
+
+    if (this.state.show6 && scrollPos <= 4200) {
+      this.setState({
+        show6: false
+      });
+    }
   };
 
   render() {
     const jobs = [
       {
+        icon: vincitLogo,
+        company: 'Vincit',
+        link: 'https://www.vincit.com',
+        role: 'Software Developer',
+        date: 'April 2019 - Present',
+        description:
+          'Vincit is not just another software company. Through hard work, we have been ranked first at Best Workplaces in Europe by Great Place to Work Institute (2016), and have been selected three times as Best Workplace in Finland (2014, 2015, 2016). We provide software development and design services.'
+      },
+      {
         icon: immerseLogo,
         company: 'Immerse',
         link: 'https://www.immerse.online',
         role: 'Software Engineer',
-        date: 'July 2018 - September 2018',
+        date: 'October 2018 - March 2019',
         description:
           'Immerse empowers language teachers and students by exponentially accelerating language immersion. Today, that means we have developed the first virtual reality software that makes both learning and teaching a language online more fun and effective than ever before.'
       },
@@ -123,7 +146,7 @@ class Work extends React.Component {
         company: 'Adigami',
         link: 'http://www.adigami.com',
         role: 'Software Engineer Intern',
-        date: 'July 2018 - September 2018',
+        date: 'April 2018 - June 2018',
         description:
           'Adigami is a cloud-based service that enables fast setup using its API connectors with top search engines, ad servers, bid management systems, and social media networks.'
       },
@@ -132,7 +155,7 @@ class Work extends React.Component {
         company: 'The Portal',
         link: 'https://www.theportal.io',
         role: 'Software Engineer Intern',
-        date: 'July 2018 - September 2018',
+        date: 'October 2017 - April 2018',
         description:
           'The Portal is a California non-profit corporation (a 501 (c) (3), application pending). We shape the future of the local entrepreneurial community by empowering people and organizations to realize their potential. We cultivate individuals to meet the evolving needs of organizations by administering innovative training, apprenticeship and job placement programs that focus on real world experiences.'
       }
@@ -148,6 +171,8 @@ class Work extends React.Component {
         show = this.state.show3;
       } else if (index === 3) {
         show = this.state.show4;
+      } else if (index === 4) {
+        show = this.state.show5;
       }
       return (
         <Info
@@ -163,76 +188,90 @@ class Work extends React.Component {
     });
 
     return (
-      <Element name="work" className="work-section">
-        <div className="work-section__header">Work Experience</div>
-        <div className="work-section__content">
-          <div className="work-section__content__left">
+      <Element name='work' className='work-section'>
+        <div className='work-section__header'>Work Experience</div>
+        <div className='work-section__content'>
+          <div className='work-section__content__left'>
             <img
               src={purpleLine}
               className={cx('work-section__content__left__line line-1', {
                 fullOpacity: this.state.show2
               })}
-              alt="alt"
+              alt='alt'
             />
             <img
               src={purpleLine}
               className={cx('work-section__content__left__line line-2', {
                 fullOpacity: this.state.show3
               })}
-              alt="alt"
+              alt='alt'
             />
             <img
               src={purpleLine}
               className={cx('work-section__content__left__line line-3', {
                 fullOpacity: this.state.show4
               })}
-              alt="alt"
+              alt='alt'
             />
             <img
               src={purpleLine}
               className={cx('work-section__content__left__line line-4', {
                 fullOpacity: this.state.show5
               })}
-              alt="alt"
+              alt='alt'
+            />
+            <img
+              src={purpleLine}
+              className={cx('work-section__content__left__line line-5', {
+                fullOpacity: this.state.show6
+              })}
+              alt='alt'
             />
 
-            <div className="work-section__content__left__dot">
+            <div className='work-section__content__left__dot'>
               <img
                 src={purpleDot}
-                className="work-section__content__left__dot__icon"
-                alt="alt"
+                className='work-section__content__left__dot__icon'
+                alt='alt'
               />
             </div>
-            <div className="work-section__content__left__dot">
+            <div className='work-section__content__left__dot'>
               <img
                 src={purpleDot}
-                className="work-section__content__left__dot__icon"
-                alt="alt"
+                className='work-section__content__left__dot__icon'
+                alt='alt'
               />
             </div>
-            <div className="work-section__content__left__dot">
+            <div className='work-section__content__left__dot'>
               <img
                 src={purpleDot}
-                className="work-section__content__left__dot__icon"
-                alt="alt"
+                className='work-section__content__left__dot__icon'
+                alt='alt'
               />
             </div>
-            <div className="work-section__content__left__dot">
+            <div className='work-section__content__left__dot'>
               <img
                 src={purpleDot}
-                className="work-section__content__left__dot__icon"
-                alt="alt"
+                className='work-section__content__left__dot__icon'
+                alt='alt'
               />
             </div>
-            <div className="work-section__content__left__dot">
+            <div className='work-section__content__left__dot'>
               <img
                 src={purpleDot}
-                className="work-section__content__left__dot__icon"
-                alt="alt"
+                className='work-section__content__left__dot__icon'
+                alt='alt'
+              />
+            </div>
+            <div className='work-section__content__left__dot'>
+              <img
+                src={purpleDot}
+                className='work-section__content__left__dot__icon'
+                alt='alt'
               />
             </div>
           </div>
-          <div className="work-section__content__right">
+          <div className='work-section__content__right'>
             {Jobs}
             <div
               className={cx('work-section__content__right__view-resume', {
