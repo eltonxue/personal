@@ -2,6 +2,7 @@ import React from 'react';
 
 import ProjectCard from './Card';
 
+import procoreLogo from '../../assets/icons/company/procore-logo.png';
 import technologist from '../../assets/technologist.png';
 import portalLogo from '../../assets/icons/company/portal-logo.png';
 
@@ -98,7 +99,7 @@ const projects = [
       coreOverflow6,
       coreOverflow7
     ],
-    icon: 'https://alternative.me/icons/procore.jpg',
+    icon: procoreLogo,
     title: 'CoreOverflow',
     company: 'Procore Technologies',
     description:
