@@ -118,7 +118,7 @@ class Work extends React.Component {
         icon: vincitLogo,
         company: 'Vincit',
         link: 'https://www.vincit.com',
-        role: 'Software Developer',
+        role: 'Software Engineer',
         date: 'April 2019 - Present',
         description:
           'Vincit is not just another software company. Through hard work, we have been ranked first at Best Workplaces in Europe by Great Place to Work Institute (2016), and have been selected three times as Best Workplace in Finland (2014, 2015, 2016). We provide software development and design services.'
@@ -145,7 +145,7 @@ class Work extends React.Component {
         icon: adigamiLogo,
         company: 'Adigami',
         link: 'http://www.adigami.com',
-        role: 'Software Engineer Intern',
+        role: 'Software Engineer Co-op',
         date: 'April 2018 - June 2018',
         description:
           'Adigami is a cloud-based service that enables fast setup using its API connectors with top search engines, ad servers, bid management systems, and social media networks.'

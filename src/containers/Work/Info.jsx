@@ -23,7 +23,7 @@ const Info = ({ show, icon, company, link, role, date, description }) => {
           <div className="job-info__content__title__role">{role}</div>
           <div className="job-info__content__title__date">{date}</div>
         </div>
-        <div className="job-info__content__body">{description}</div>
+        <div className="job-info__content__body">{description}<br /><a href={link}>Learn more</a></div>
       </div>
     </div>
   );
